@@ -10,10 +10,19 @@ const destinos = document.querySelector("#select-destinos");
 /* EVENTOS */
 
 /* FUNCIONES */
+
+/**
+ * @description Función que devuelve un número aleatorio dependiendo de la longitud del array pasado como parámetro
+ * @param {Array} array Array del que se quiere obtener un índice aleatorio
+ * @returns {number} Índice aleatorio del array
+ */
 const aleatorio = (array) => {
   return Math.floor(Math.random() * array.length);
 };
 
+/**
+ * @description Función que pinta un banner aleatorio en la sección de bienvenida
+ */
 const pintarBanner = () => {
   const arrayBanners = [
     {
@@ -65,6 +74,9 @@ const pintarBanner = () => {
   imagenBanner.alt = elemento.alt;
 };
 
+/**
+ * @description Función que pinta las cards de viajes en la sección de recomendados
+ */
 const pintarCards = () => {
   const arrayViajes = [
     {
@@ -141,6 +153,9 @@ const pintarCards = () => {
   flexContainer.append(fragment);
 };
 
+/**
+ * @description Función que pinta los destinos en la sección de destinos
+ */
 const pintarDestinos = () => {
   const arrayDestinos = ["Burgos", "Vitoria", "Barcelona", "Madrid", "Bilbao"];
 
